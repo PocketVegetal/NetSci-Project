@@ -14,7 +14,7 @@ path = "NetSci-Project\graphs\CD1-E_no2"
 
 ab_path = os.path.dirname(__file__)
 
-# extraction of data from csv as dictionnary
+# extraction of data from csv as dictionary
 
 def extraction_data_csv(path,name):
     file = open(op.join(path,name), "r")
