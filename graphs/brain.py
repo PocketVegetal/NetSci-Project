@@ -6,9 +6,15 @@ import matplotlib.pyplot as plt
 import pathlib
 import time
 
+# import graph dataset, change paths if needed
+
 path = "synthetic_graph_1\\synthetic_graph_1\\1_b_3_0"
-path = "CD1-E_no2\CD1-E_no2\CD1-E-no2_iso3um_stitched_segmentation_bulge_size_3.0"
+path = "NetSci-Project\graphs\CD1-E_no2"
+
+
 ab_path = os.path.dirname(__file__)
+
+# extraction of data from csv as dictionnary
 
 def extraction_data_csv(path,name):
     file = open(op.join(path,name), "r")
@@ -73,8 +79,8 @@ for e in edges:
     X = [ nodes[edges[e]['node1id']]['pos_x'], nodes[edges[e]['node2id']]['pos_x'] ]
     Y = [ nodes[edges[e]['node1id']]['pos_y'], nodes[edges[e]['node2id']]['pos_y'] ]
     Z = [ nodes[edges[e]['node1id']]['pos_z'], nodes[edges[e]['node2id']]['pos_z'] ]
-    ax.plot(X, Y, Z, color='red', alpha=0.4, linewidth = edges[e]['avgRadiusAvg']*5)
-    if progress%5000 == 0:
+    ax.plot(X, Y, Z, color='red', alpha=0.4, linewidth = edges[e]['avgRadiusAvg']*5) # using average radius as radius to plot, could use minimum radius
+    if progress%25000 == 0:
         print(str(100*progress/len(edges)) + "%")
     progress+=1
 
