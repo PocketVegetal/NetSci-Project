@@ -10,7 +10,7 @@
   config-info(
     title: [Title],
     subtitle: [An optional short subtitle],
-    authors: ([Tomáš Kysela], [?], [?], [?]),
+    authors: ([Tomáš Kysela], [Denis Dagbert], [?], [?]),
     extra: [],
     footer: [First Author, Second Author, Third Author],
     download-qr: "https://github.com/tomkys144/NetSci-Project",
@@ -27,7 +27,11 @@
 
 
 #slide(title: [Dataset])[
-  - Something
+  - Representation of veins in the brain
+  - 17 subdatasets of various size
+  - Millions of nodes and edges
+  - Data on volume, radius and shape of the edges
+  - Available for free on https://github.com/jocpae/VesselGraph?tab=readme-ov-file
 ]
 
 
